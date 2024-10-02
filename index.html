@@ -4,111 +4,653 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conversion-focused SaaS Copywriting Services">
-    <title>Zain's SaaS Copywriting</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    
+    <title>Zen - SaaS Copywriter & Software Developer</title>
+    <style>
+        /* CSS styles */
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #1445af;
+            --secondary-cta-color: #c84209;
+        }
+        /*
+         :root {
+            --primary-color: #f0f0f0;
+            --secondary-color: #2196f3;
+            --text-color: #333;
+            --accent-color: #ff4081;
+            --secondary-cta-color: #c84209;
+        }
+            */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+        }
+
+       .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adjust padding if necessary */
+}
+
+/* Optional: Override padding for the features section if needed */
+.features .container {
+    padding: 0 10px; /* Reduce padding specifically for features */
+}
+
+        header {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button2 {
+            margin: 10px;
+            background-color: var(--secondary-cta-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2c4dd1;
+        }
+
+        .cta-button2:hover {
+            background-color: #d12c2c;
+        }
+
+        .cta-buttons {
+            padding: 5px;
+        }
+
+        .hero {
+            background-color: var(--secondary-color);
+            padding: 150px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .case-study {
+            padding: 50px 0;
+            background-color: var(--primary-color);
+        }
+
+        .case-study-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .case-study-image {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .case-study-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .case-study-text {
+            flex: 2;
+        }
+
+       .feature {
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensures full width within the container */
+}
+
+        .feature-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #888;
+            margin-right: 20px;
+            width: 80px;
+            height: 80px;
+            border: 3px solid #888;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .feature-content {
+            flex: 2;
+            padding-right: 20px; /* Adjust padding as needed */
+
+        }
+
+        .feature-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .feature-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Optionally, set a max-height to maintain consistency */
+    max-height: 200px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feature-title span {
+            color: #1445af;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #1445af;
+        }
+
+        .customer-quote {
+            background-color: #1445af;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .quote-author {
+            font-style: normal;
+            margin-top: 10px;
+        }
+
+        .services {
+            padding: 50px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .service-item h3 {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .process {
+            padding: 50px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .process h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-item {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .process-item h3 {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .bottom-cta {
+            background-color: var(--secondary-color);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .bottom-cta h2 {
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+    .hero-content,
+    .case-study-content,
+    .feature {
+        flex-direction: column;
+    }
+
+    .hero-text,
+    .case-study-image,
+    .feature-content,
+    .feature-image {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-number {
+        margin-bottom: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .features .container {
+        padding: 0 10px; /* Ensure padding is adjusted on smaller screens */
+    }
+}
+    </style>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">Zain's Copywriting</div>
+        <nav class="container">
+            <div class="logo">Zen Makhlouf</div>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#" class="cta-button">Free Consultation</a></li>
+                <li><a href="#" class="cta-button2">Hire Me</a></li>
             </ul>
         </nav>
-        <div class="hero-section">
-            <h1>Copy That Sells for SaaS</h1>
-            <p>I help tech startups and global brands increase conversions with clear, human-focused copy.</p>
-            <a href="https://calendly.com/zen-makhlouf/30min" target="_blank" class="btn">Schedule an Appointment</a>
-        </div>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm Zain, a freelance SaaS copywriter specializing in AI and technology. I create landing pages, product
-                descriptions, and email campaigns that convert.</p>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Clients Say</h2>
-            <div class="testimonial-list">
-                <div class="testimonial-item">
-                    <p>"Zain transformed our sales copy and doubled our conversion rates!"</p>
-                    <h4>- SaaS Startup CEO</h4>
-                </div>
-                <div class="testimonial-item">
-                    <p>"His copy resonated with our target audience and boosted engagement."</p>
-                    <h4>- Marketing Director</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Services</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Landing Pages</h3>
-                    <p>High-converting landing pages that guide users to take action.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Email Campaigns</h3>
-                    <p>Engaging emails that build relationships and drive sales.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Sales Copy</h3>
-                    <p>Persuasive sales copy for SaaS products and services.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-            <h2>Subscribe to My Newsletter</h2>
-            <div id="mc_embed_shell">
-                <div id="mc_embed_signup">
-                    <form
-                        action="https://github.us17.list-manage.com/subscribe/post?u=c818da9ce3dbba5f19772b949&amp;id=bbd657315d&amp;f_id=0052c2e1f0"
-                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
-                        class="validate">
-                        <div id="mc_embed_signup_scroll">
-                            <div class="mc-field-group">
-                                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
-                            </div>
-                            <div id="mce-responses" class="clear foot">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>
-                            <div aria-hidden="true" style="position:absolute;left:-5000px;">
-                                <input type="text" name="b_c818da9ce3dbba5f19772b949_bbd657315d" tabindex="-1" value="">
-                            </div>
-                            <div class="optionalParent">
-                                <div class="clear foot">
-                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                        class="button">
-                                </div>
-                            </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Headline - present your product's capabilities</h1>
+                        <p>Explainer paragraph. Describe the key features that enable your product's capabilities - plus
+                            the benefits that they deliver.</p>
+                        <ul class="feature-list">
+                            <li>Key product feature</li>
+                            <li>Key product feature</li>
+                            <li>Key product feature</li>
+                        </ul>
+                        <div class="cta-buttons">
+                            <a href="#" class="cta-button primary-cta">PRIMARY CTA</a>
+                            <a href="#" class="cta-button2 secondary-cta">SECONDARY CTA</a>
                         </div>
-                    </form>
+                    </div>
+                    <div class="hero-image">
+                        <img src="me_bgremove.png" alt="Product Image">
+                    </div>
+                </div>
+                <div class="brands">
+                    <p>These brands enjoy our benefits</p>
+                    <img src="https://via.placeholder.com/100x50" alt="Logo" class="brand-logo">
+                    <img src="https://via.placeholder.com/100x50" alt="Logo" class="brand-logo">
+                    <img src="https://via.placeholder.com/100x50" alt="Logo" class="brand-logo">
+                    <img src="https://via.placeholder.com/100x50" alt="Logo" class="brand-logo">
                 </div>
             </div>
-    </section>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature">
+                    <div class="feature-content">
+                        <h2 class="feature-title">Perform the <span>main product capability</span> - better than our
+                            competition
+                        </h2>
+                        <p class="feature-description">Summarize the key benefits. Mention your solution's key
+                            technologies and
+                            introduce any fresh strategic levers (philosophical approaches) that enable you to deliver
+                            the
+                            benefits
+                            - to build credibility.</p>
+                        <ul class="feature-list">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Feature 1 Image">
+                    </div>
+                </div>
+                <div class="customer-quote">
+                    <p>"A punchy customer quote that proves this solution is more effective than the status quo at
+                        performing
+                        the
+                        main capability."</p>
+                    <p class="quote-author">Customer, Position<br>Business</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Feature 2 Image">
+                    </div>
+                    <div class="feature-content">
+                        <h2 class="feature-title">Make strategic decisions that <span>add more value</span> with
+                            reliable
+                            insights
+                            about your customers/problem</h2>
+                        <p class="feature-description">Summarize the key benefits. Mention your solution's key
+                            technologies and
+                            introduce any fresh strategic levers (philosophical approaches) that enable you to deliver
+                            the
+                            benefits
+                            - to build credibility.</p>
+                        <ul class="feature-list">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="customer-quote">
+                    <p>"A punchy customer quote that describes the extraordinary insights and value that this solution
+                        delivers."
+                    </p>
+                    <p class="quote-author">Customer, Position<br>Business</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-content">
+                        <h2 class="feature-title">Improve your services thanks to a <span>new culture of continuous
+                                feedback</span>
+                        </h2>
+                        <p class="feature-description">Summarize the key benefits. Mention your solution's key
+                            technologies and
+                            introduce any fresh strategic levers (philosophical approaches) that enable you to deliver
+                            the
+                            benefits
+                            - to build credibility.</p>
+                        <ul class="feature-list">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Feature 3 Image">
+                    </div>
+                </div>
+                <div class="customer-quote">
+                    <p>"A punchy customer quote that describes the huge operational improvements that this solution
+                        enabled over
+                        time."</p>
+                    <p class="quote-author">Customer, Position<br>Business</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Feature 4 Image">
+                    </div>
+                    <div class="feature-content">
+                        <h2 class="feature-title">Accelerate your growth with <span>process automation and
+                                integrations</span>
+                            that
+                            enable complex workflows</h2>
+                        <p class="feature-description">Summarize the key benefits. Mention your solution's key
+                            technologies and
+                            introduce any fresh strategic levers (philosophical approaches) that enable you to deliver
+                            the
+                            benefits
+                            - to build credibility.</p>
+                        <ul class="feature-list">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="customer-quote">
+                    <p>"A punchy customer quote that describes the process transformation and global expansion that this
+                        solution
+                        enabled."</p>
+                    <p class="quote-author">Customer, Position<br>Business</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-study">
+            <div class="container">
+                <h2>Case Study</h2>
+                <div class="case-study-content">
+                    <div class="case-study-image">
+                        <img src="https://via.placeholder.com/600x400" alt="Client Company Logo">
+                    </div>
+                    <div class="case-study-text">
+                        <h3>Client Name</h3>
+                        <h4>Company Name</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2>My Services</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Market Research</h3>
+                        <p>In-depth analysis of your target market and competitors.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Landing Pages that Perform</h3>
+                        <p>Crafting high-converting landing pages tailored to your audience.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Social Media Posts that Persuade</h3>
+                        <p>Engaging content that drives action on social platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <h2>My Process</h2>
+                <div class="process-grid">
+                    <div class="process-item">
+                        <h3>1. Discovery Call</h3>
+                        <p>We'll talk through your business, strategy, and goals at rigor. What's working? What's not?
+                            What have you tried?</p>
+                    </div>
+                    <div class="process-item">
+                        <h3>2. Data Sharing</h3>
+                        <p>You'll upload all your customer research, information, and details to your own Notion board.
+                            Comprehensive data = high quality copy.</p>
+                    </div>
+                    <div class="process-item">
+                        <h3>3. Iterative Deliverables</h3>
+                        <p>I'll complete the work within a 3-6 week turnaround time, depending on the complexity of the
+                            deliverable.</p>
+                    </div>
+                    <div class="process-item">
+                        <h3>4. Revisions and Finalization</h3>
+                        <p>We'll work through revisions until you're satisfied. I use Figma for wireframes, Google Docs
+                            for written content. I typically respond to inquiries within 1-2 business days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-cta">
+            <div class="container">
+                <h2>Ready to boost your SaaS sales?</h2>
+                <a href="#" class="cta-button">Schedule Your Free Consultation Now</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2024 Zain's Copywriting | All Rights Reserved</p>
+        <div class="container">
+            <p>&copy; 2024 Zen Makhlouf. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
